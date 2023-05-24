@@ -1,0 +1,9 @@
+{
+  "proxies": [
+    {
+      "name": "gcpreleases-v1",
+      "serviceAccount": "apigee-api-caller@ronoaldo-apigee-demo-a.iam.gserviceaccount.com"
+    }
+  ],
+  "sharedflows": []
+}

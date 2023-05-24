@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="16" name="gcpreleases-v1">
+  <DisplayName>GCP Release Notes</DisplayName>
+  <Description>API Proxy that fetches release notes from Google Cloud.</Description>
+  <CreatedAt>1684898921700</CreatedAt>
+  <LastModifiedAt>1684899084539</LastModifiedAt>
+  <BasePaths>/gcpreleases/v1</BasePaths>
+  <Policies>
+    <Policy>AM-CreateQuery</Policy>
+    <Policy>AM-DontCopyPathSuffix</Policy>
+    <Policy>EV-ExtractQueryResults</Policy>
+    <Policy>AM-FormatResponse</Policy>
+  </Policies>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <TargetEndpoints>
+    <TargetEndpoint>bigquery-v2</TargetEndpoint>
+    <TargetEndpoint>echo</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>

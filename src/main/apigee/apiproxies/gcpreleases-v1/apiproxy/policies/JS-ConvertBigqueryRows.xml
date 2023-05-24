@@ -1,0 +1,18 @@
+<Javascript name='JS-ConvertBigqueryRows' timeLimit='200'>
+  <Source><![CDATA[
+    var body = context.getVariable("response.content");
+    if (body) {
+        var src = JSON.parse(body);
+        var rows = []
+        for (var i=0; i < src.rows.length; i++) {
+            var row = {};
+            for (var j=0; j< src.rows[i].f.length; j++) {
+                row[src.schema.fields[j].name] = src.rows[i].f[j].v;
+            }
+            rows.push(row);
+        }
+        response.headers['content-type'] = 'application/json';
+        response.content = JSON.stringify(rows, null, "  ");
+    }
+]]></Source>
+</Javascript>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-CreateQuery">
+  <DisplayName>AM-CreateQuery</DisplayName>
+  <Set>
+    <QueryParams/>
+    <FormParams/>
+    <Verb>POST</Verb>
+    <Payload contentType="application/json">{
+      "kind": "bigquery#queryResource",
+      "query": "SELECT product_name, release_note_type, description, published_at FROM `bigquery-public-data.google_cloud_release_notes.release_notes` ORDER BY published_at DESC LIMIT 5",
+      "useLegacySql": false
+    }</Payload>
+  </Set>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

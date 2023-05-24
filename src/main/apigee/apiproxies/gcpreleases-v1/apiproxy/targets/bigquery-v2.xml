@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="bigquery-v2">
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step>
+        <Name>AM-DontCopyPathSuffix</Name>
+      </Step>
+    </Request>
+    <Response/>
+  </PreFlow>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response>
+      <Step>
+        <Name>EV-ExtractQueryResults</Name>
+      </Step>
+      <Step>
+        <Name>AM-FormatResponse</Name>
+      </Step>
+      <Step>
+        <Name>JS-ConvertBigqueryRows</Name>
+      </Step>
+    </Response>
+  </PostFlow>
+  <Flows/>
+  <HTTPTargetConnection>
+    <URL>https://bigquery.googleapis.com/bigquery/v2/projects/ronoaldo-apigee-demo-a/queries</URL>
+    <Authentication>
+      <GoogleAccessToken>
+        <Scopes>
+          <Scope>https://www.googleapis.com/auth/bigquery</Scope>
+        </Scopes>
+      </GoogleAccessToken>
+    </Authentication>
+  </HTTPTargetConnection>
+</TargetEndpoint>

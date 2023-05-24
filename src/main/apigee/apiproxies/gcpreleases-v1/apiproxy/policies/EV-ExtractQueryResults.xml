@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="false" enabled="true" name="EV-ExtractQueryResults">
+  <DisplayName>EV-ExtractQueryResults</DisplayName>
+  <Source clearPayload="false">response</Source>
+  <JSONPayload>
+    <Variable name="totalRows">
+      <JSONPath>$.totalRows</JSONPath>
+    </Variable>
+    <Variable name="schema">
+      <JSONPath>$.schema</JSONPath>
+    </Variable>
+    <Variable name="rows">
+      <JSONPath>$.rows</JSONPath>
+    </Variable>
+  </JSONPayload>
+  <VariablePrefix>bigqueryResult</VariablePrefix>
+</ExtractVariables>

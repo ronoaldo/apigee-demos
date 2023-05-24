@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-FormatResponse">
+  <DisplayName>AM-FormatResponse</DisplayName>
+  <Set>
+    <Payload contentType="application/json">{
+    "schema": {bigqueryResult.schema},
+    "rows": {bigqueryResult.rows},
+    "totalRows": {bigqueryResult.totalRows}
+    }</Payload>
+  </Set>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

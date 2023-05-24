@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+  <PreFlow name="PreFlow">
+    <Request>
+    </Request>
+    <Response/>
+  </PreFlow>
+  <Flows>
+    <Flow name="get">
+      <Condition>(request.verb = "GET") AND (proxy.pathsuffix MatchesPath "/")</Condition>
+      <Description>GET /</Description>
+      <Request>
+        <Step>
+          <Name>AM-CreateQuery</Name>
+        </Step>
+      </Request>
+    </Flow>
+    <Flow name="getEcho">
+      <Condition>proxy.pathsuffix MatchesPath "/echo"</Condition>
+      <Description>Echoes the request</Description>
+    </Flow>
+  </Flows>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response/>
+  </PostFlow>
+  <HTTPProxyConnection>
+    <BasePath>/gcpreleases/v1</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="query">
+    <Condition>proxy.pathsuffix MatchesPath "/"</Condition>
+    <TargetEndpoint>bigquery-v2</TargetEndpoint>
+  </RouteRule>
+  <RouteRule name="echo">
+    <TargetEndpoint>echo</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>
