@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: GCP Release Notes
+  description: |-
+    This is a sample demo API to interact with BigQuery as backend and format a response
+    message.
+  contact:
+    email: nobody@example.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+servers:
+  - url: https://34.96.74.81.nip.io/gcpreleases/v1
+paths:
+  /releases:
+    get:
+      summary: List 5 most recent release notes.
+      operationId: getReleases
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReleaseInfo'
+
+components:
+  schemas:
+    ReleaseInfo:
+      type: object
+      properties:
+        description:
+          type: string
+        product_name:
+          type: string
+        published_at:
+          type: string
+          format: date-time
+        release_note_type:
+          type: string

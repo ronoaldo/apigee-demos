@@ -6,9 +6,9 @@
     <Response/>
   </PreFlow>
   <Flows>
-    <Flow name="get">
-      <Condition>(request.verb = "GET") AND (proxy.pathsuffix MatchesPath "/")</Condition>
-      <Description>GET /</Description>
+    <Flow name="getReleases">
+      <Condition>(request.verb = "GET") AND (proxy.pathsuffix MatchesPath "/releases")</Condition>
+      <Description>GET /releases</Description>
       <Request>
         <Step>
           <Name>AM-CreateQuery</Name>
@@ -28,7 +28,7 @@
     <BasePath>/gcpreleases/v1</BasePath>
   </HTTPProxyConnection>
   <RouteRule name="query">
-    <Condition>proxy.pathsuffix MatchesPath "/"</Condition>
+    <Condition>proxy.pathsuffix MatchesPath "/releases"</Condition>
     <TargetEndpoint>bigquery-v2</TargetEndpoint>
   </RouteRule>
   <RouteRule name="echo">
