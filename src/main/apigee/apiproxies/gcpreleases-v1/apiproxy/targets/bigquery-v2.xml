@@ -24,7 +24,7 @@
   </PostFlow>
   <Flows/>
   <HTTPTargetConnection>
-    <URL>https://bigquery.googleapis.com/bigquery/v2/projects/ronoaldo-apigee-demo-a/queries</URL>
+    <URL>https://bigquery.googleapis.com/bigquery/v2/projects/ronoaldo-apigee-demo/queries</URL>
     <Authentication>
       <GoogleAccessToken>
         <Scopes>

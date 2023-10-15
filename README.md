@@ -51,6 +51,36 @@ curl -k https://${ENV_GROUP_HOSTNAME}/gcpreleases/v1/echo | jq .
 curl -k https://${ENV_GROUP_HOSTNAME}/gcpreleases/v1/releases | jq .
 ```
 
+### Setup to use in localhost development
+
+You can also open this project using VS Code with the Cloud Code extension.
+The big picture is: you need to have a service-account.json file visible to the local
+Apigee Docker container as a volume folder, and set up the GOOGLE_APPLICATION_CREDENTIALS
+environment variable to point to that location. You also need to configure SSL certificates
+to call out the API.
+
+You need to follow some tutorials to test locally the Apigee -> Bigquery sample:
+
+1. Create a new service account key and save it on a local folder. I recommend using the `cert`
+   folder as it is in .gitignore. If you have deployed to Apigee Eval org as described previously, exporting
+   a new service account key using the same service account you created earlier should work.
+   **Important**: you need to add the role '**Service Account Token Creator**' to this account, in addition
+   to the '**Bigquery Job User**' role.
+2. Configure Cloud Code to use a service account. This requires configuring the docker environment
+   as described in
+   [this document](https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/deploy-environment#configuring_service_accounts_with_proxy_and_shared_flow_deployments) and also
+   the container configuration [described here](https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/manage-apigee-emulator#customizing_the_apigee_emulator_to_support_service_account-based_authentication).
+3. Follow the steps to deploy the environment using the instructions
+   [provided here](https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/deploy-environment#deploy).
+
+When developping locally, you can fetch logs from your local container with this:
+
+    docker logs apigee-localhost 2>&1 >/dev/null | grep '^{' | jq -r .exceptionStackTrace
+
+This should make easier to see the local logs and stack traces if issues arise.
+Change the part `apigee-localhost` to the name you gave to your container during the
+local environment setup.
+
 ## References
 
 * Inspiration: https://www.youtube.com/watch?v=lUDZAzSpWEw
