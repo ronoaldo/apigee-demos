@@ -25,7 +25,7 @@ https://cloud.google.com/apigee/docs/api-platform/fundamentals/download-api-prox
 access Bigquery public data and also has the Bigquery Job User role.
 
 After you deploy/import your bundle, go to the Develop tab and edit the Target
-Endpoint bigquery-v2, and change the URL final part to match your Google Cloud
+Endpoint bigquery, and change the URL final part to match your Google Cloud
 Project ID. Deploy this changed version to the eval environment.
 
 ### Setup to use a Test VM

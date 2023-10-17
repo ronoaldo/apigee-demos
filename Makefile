@@ -9,3 +9,6 @@ all: bundle
 bundle:
 	mkdir -p $(BUNDLE_ZIP_DIR)
 	cd $(PROXY_DIR) && zip $(BUNDLE_ZIP_DIR)/gcpreleases-v1_$$(date +%Y%m%d%H%M%S).zip -r ./
+
+clean:
+	rm -rvf ${BUNDLE_ZIP_DIR}

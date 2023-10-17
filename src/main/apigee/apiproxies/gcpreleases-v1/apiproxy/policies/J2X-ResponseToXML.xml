@@ -1,0 +1,10 @@
+<JSONToXML name="J2X-ResponseToXML">
+    <Source>response</Source>
+    <OutputVariable>response</OutputVariable>
+    <Options>
+        <ArrayRootElementName>releases</ArrayRootElementName>
+        <ArrayItemElementName>note</ArrayItemElementName>
+        <ObjectRootElementName>response</ObjectRootElementName>
+        <Indent>true</Indent>
+    </Options>
+</JSONToXML>

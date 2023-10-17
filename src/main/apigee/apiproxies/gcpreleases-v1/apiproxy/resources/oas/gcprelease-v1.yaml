@@ -32,10 +32,10 @@ components:
       properties:
         description:
           type: string
-        product_name:
+        noteType:
           type: string
-        published_at:
+        productName:
+          type: string
+        publishedAt:
           type: string
           format: date-time
-        release_note_type:
-          type: string
