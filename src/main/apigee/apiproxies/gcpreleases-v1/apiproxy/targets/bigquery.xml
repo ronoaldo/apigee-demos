@@ -12,12 +12,15 @@
     <Request/>
     <Response>
       <Step>
+        <Condition>request.queryparam.raw != "true"</Condition>
         <Name>EV-ExtractQueryResults</Name>
       </Step>
       <Step>
+        <Condition>request.queryparam.raw != "true"</Condition>
         <Name>AM-FormatResponse</Name>
       </Step>
       <Step>
+        <Condition>request.queryparam.raw != "true"</Condition>
         <Name>JS-ConvertBigqueryRows</Name>
       </Step>
     </Response>
