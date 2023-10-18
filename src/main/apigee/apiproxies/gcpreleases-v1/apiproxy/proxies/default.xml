@@ -2,12 +2,7 @@
 <ProxyEndpoint name="default">
   <PreFlow name="PreFlow">
     <Request/>
-    <Response>
-      <Step>
-        <Condition>request.header.accept.values.string == "application/xml"</Condition>
-        <Name>J2X-ResponseToXML</Name>
-      </Step>
-    </Response>
+    <Response/>
   </PreFlow>
   <Flows>
     <Flow name="getReleases">
@@ -20,13 +15,29 @@
       </Request>
     </Flow>
     <Flow name="doEcho">
-      <Condition>proxy.pathsuffix MatchesPath "/echo"</Condition>
+      <Condition>
+        (request.verb = "GET" OR request.verb = "POST")
+        AND proxy.pathsuffix MatchesPath "/echo"
+      </Condition>
       <Description>Echoes the request using a mock endpoint</Description>
+    </Flow>
+    <Flow name="do404">
+      <Request>
+        <Step>
+          <Name>RF-NotFound</Name>
+          <Description>Raises 404 if no valid request was specified</Description>
+        </Step>
+      </Request>
     </Flow>
   </Flows>
   <PostFlow name="PostFlow">
     <Request/>
-    <Response/>
+    <Response>
+      <Step>
+        <Condition>request.header.accept.values.string == "application/xml"</Condition>
+        <Name>J2X-ResponseToXML</Name>
+      </Step>
+    </Response>
   </PostFlow>
   <HTTPProxyConnection>
     <BasePath>/gcpreleases/v1</BasePath>
@@ -39,4 +50,5 @@
     <Condition>proxy.pathsuffix MatchesPath "/echo"</Condition>
     <TargetEndpoint>echo</TargetEndpoint>
   </RouteRule>
+  <RouteRule name="not-found"></RouteRule>
 </ProxyEndpoint>

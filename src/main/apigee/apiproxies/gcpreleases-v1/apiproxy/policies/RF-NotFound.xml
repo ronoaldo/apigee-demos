@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault continueOnError="false" enabled="true" name="RF-NotFound">
+  <FaultResponse>
+    <Set>
+      <Headers/>
+      <StatusCode>404</StatusCode>
+      <ReasonPhrase>Not found</ReasonPhrase>
+      <Payload contentType="application/json">{
+        "message": "The requested resource was not found."
+      }</Payload>
+    </Set>
+  </FaultResponse>
+</RaiseFault>
