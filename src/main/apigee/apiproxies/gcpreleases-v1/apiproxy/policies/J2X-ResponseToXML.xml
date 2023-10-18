@@ -2,8 +2,8 @@
     <Source>response</Source>
     <OutputVariable>response</OutputVariable>
     <Options>
-        <ArrayRootElementName>releases</ArrayRootElementName>
-        <ArrayItemElementName>note</ArrayItemElementName>
+        <ArrayRootElementName>response</ArrayRootElementName>
+        <ArrayItemElementName>item</ArrayItemElementName>
         <ObjectRootElementName>response</ObjectRootElementName>
         <Indent>true</Indent>
     </Options>

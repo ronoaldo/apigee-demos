@@ -7,7 +7,7 @@
     <Verb>POST</Verb>
     <Payload contentType="application/json">{
       "kind": "bigquery#queryResource",
-      "query": "SELECT product_name proctName, release_note_type noteType, description, published_at publishedAt FROM `bigquery-public-data.google_cloud_release_notes.release_notes` ORDER BY published_at DESC LIMIT 50",
+      "query": "SELECT product_name proctName, release_note_type noteType, description, published_at publishedAt FROM `bigquery-public-data.google_cloud_release_notes.release_notes` ORDER BY published_at DESC LIMIT 10",
       "useLegacySql": false
     }</Payload>
   </Set>
