@@ -24,6 +24,27 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ReleaseInfo'
+  /echo:
+    get:
+      summary: Returns information about the data sent in the request using the Mock API
+      operationId: getEcho
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EchoInfo'
+    post:
+      summary: Returns information about the data sent in the request using the Mock API
+      operationId: postEcho
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EchoInfo'
 
 components:
   schemas:
@@ -39,3 +60,17 @@ components:
         publishedAt:
           type: string
           format: date-time
+    EchoInfo:
+      type: object
+      properties:
+        args:
+          type: object
+        body:
+          type: string
+        headers:
+          type: object
+        method:
+          type: string
+        url:
+          type: string
+        

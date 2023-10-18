@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <APIProxy name="gcpreleases-v1">
   <DisplayName>GCP Release Notes</DisplayName>
-  <Description>API Proxy that fetches release notes from Google Cloud.</Description>
+  <Description>
+    API Proxy that fetches release notes from Google Cloud.
+    Also offers an /echo endpoint to test the proxy calls to remote servers
+    and inspect request data.
+  </Description>
 </APIProxy>
