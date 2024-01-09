@@ -9,7 +9,10 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.11
+  version: 1.0.12
+servers:
+  - url: apigee-34-29-171-212.sslip.net
+    description: Current Test Server
 paths:
   /releases:
     get:
