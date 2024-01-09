@@ -2,7 +2,7 @@ PROXY=gcpreleases-v1
 PROXY_DIR=src/main/apigee/apiproxies/gcpreleases-v1
 TARGET=$(PWD)/target
 BUNDLE_ZIP_DIR=$(TARGET)/bundles
-BUNDLE_ZIP_FILE=$(BUNDLE_ZIP_DIR)/gcpreleases-v1_$(shell date +%Y%m%d%H%M%S).zip
+BUNDLE_ZIP_FILE:=$(BUNDLE_ZIP_DIR)/gcpreleases-v1_$(shell date +%Y%m%d%H%M%S).zip
 
 all: bundle
 
