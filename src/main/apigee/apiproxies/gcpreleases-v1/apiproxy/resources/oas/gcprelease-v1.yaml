@@ -9,9 +9,9 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.12
+  version: 1.0.13
 servers:
-  - url: apigee-34-29-171-212.sslip.net
+  - url: https://apigee-34-29-171-212.sslip.io/gcpreleases/v1
     description: Current Test Server
 paths:
   /releases:
@@ -76,4 +76,3 @@ components:
           type: string
         url:
           type: string
-        
