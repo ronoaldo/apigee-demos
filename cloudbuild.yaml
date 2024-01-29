@@ -14,6 +14,7 @@ steps:
     args: ['test']
   
   # Package and deploy API Proxy Bundle after unit testing
+  # TODO(ronoaldo): add script to automate this on every environment.
   - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
     id: build-and-deploy
     script: |
@@ -21,4 +22,5 @@ steps:
       set -e
       apt-get update && apt-get -yq install make zip unzip
       curl -L https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | sh -
+      export PATH=$PATH:$HOME/.apigeecli/bin
       make deploy
