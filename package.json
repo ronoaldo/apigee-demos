@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Apigee Demos. This demo uses the BigQuery API method that runs a query and synchronously returns the results to showcase how to implement and possibly monetize data-driven APIs.",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha.js"
+    "test": "./node_modules/mocha/bin/mocha.js test/unit-tests",
+    "integration-test": "echo 'Not implemented'"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,8 @@
   },
   "homepage": "https://github.com/ronoaldo/apigee-demos#readme",
   "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "apickli": "^3.0.2",
     "mocha": "^10.2.0"
   }
 }

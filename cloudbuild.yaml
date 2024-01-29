@@ -1,0 +1,17 @@
+# CI/CD pipeline for Apigee Demos project
+
+steps:
+  # Run all unit tests for all policies as configured by package.json
+  - name: 'nodejs:18'
+    id: run-unit-tests
+    entrypoint: 'npm'
+    args: ['test']
+  
+  # Package and deploy API Proxy Bundle after unit testing
+  - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
+    id: build-and-deploy
+    script: |
+      #!/usr/bin/env bash
+      sudo apt-get update && apt-get -yq install make zip
+      curl -L https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | sh -
+      make deploy

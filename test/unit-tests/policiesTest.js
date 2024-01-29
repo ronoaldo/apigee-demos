@@ -1,10 +1,10 @@
 // Load the node 'assert' library to help validating the results.
 const assert = require('assert');
 // Load the some sample data fixtures, collected using the Google Cloud API Explorer.
-const fixtures = require('./fixtures.json');
+const fixtures = require('../fixtures/bigquery.json');
 
 // The script under test here: our isolated business logic library.
-require('../src/main/apigee/apiproxies/gcpreleases-v1/apiproxy/resources/jsc/library.js');
+require('../../src/main/apigee/apiproxies/gcpreleases-v1/apiproxy/resources/jsc/library.js');
 
 // Test suit for the libraty under test
 describe('library', function() {
