@@ -1,0 +1,273 @@
+{
+    "zeroRowsResponse": {
+        "req": {
+            "kind": "bigquery#queryRequest",
+            "query": "SELECT 0 AS col LIMIT 0"
+        },
+        "resp": {
+            "kind": "bigquery#queryResponse",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "col",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            "jobReference": {
+                "projectId": "ronoaldo-apigee-demo",
+                "jobId": "job_Msdno-R2av-VSZw7WoD6uQC80OSV",
+                "location": "US"
+            },
+            "totalRows": "0",
+            "totalBytesProcessed": "0",
+            "jobComplete": true,
+            "cacheHit": true,
+            "queryId": "job_Msdno-R2av-VSZw7WoD6uQC80OSV"
+        }
+    },
+    "singleRowResponse": {
+        "req": {
+            "kind": "bigquery#queryRequest",
+            "query": "SELECT 42 AS col LIMIT 1"
+        },
+        "resp": {
+            "kind": "bigquery#queryResponse",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "col",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            "jobReference": {
+                "projectId": "ronoaldo-apigee-demo",
+                "jobId": "job_jG_03d7hftMfZlvjqUqggZhBxOYd",
+                "location": "US"
+            },
+            "totalRows": "1",
+            "rows": [
+                {
+                    "f": [
+                        {
+                            "v": "42"
+                        }
+                    ]
+                }
+            ],
+            "totalBytesProcessed": "0",
+            "jobComplete": true,
+            "cacheHit": false,
+            "queryId": "job_jG_03d7hftMfZlvjqUqggZhBxOYd"
+        }
+    },
+    "releaseNotesQuery": {
+        "req": {
+            "kind": "bigquery#queryRequest",
+            "query": "SELECT product_name projectName, release_note_type noteType, description, published_at publishedAt FROM `bigquery-public-data.google_cloud_release_notes.release_notes` ORDER BY published_at DESC LIMIT 10",
+            "useLegacySql": false
+        },
+        "resp": {
+            "kind": "bigquery#queryResponse",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "projectName",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "noteType",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "publishedAt",
+                        "type": "DATE",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            "jobReference": {
+                "projectId": "ronoaldo-apigee-demo",
+                "jobId": "job_QDftwzt96Ag5KVcYBGGf2kxnB6lr",
+                "location": "US"
+            },
+            "totalRows": "10",
+            "rows": [
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": "#### (2024-R02) Version updates\n \nNote: Your clusters might not have these versions available. Rollouts are already in progress when we publish the release notes, and can take multiple days to complete across all Google Cloud zones.\n\n  * The following versions are now available in the Stable channel:\n      * [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.11-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12611)\n      * [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.28.3-gke.1118000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283)\n  * The following versions are no longer available in the Stable channel:\n      * 1.24.17-gke.200\n      * 1.24.17-gke.2266000\n      * 1.25.10-gke.2700\n      * 1.25.13-gke.200\n      * 1.27.4-gke.900\n      * 1.27.5-gke.200\n      * 1.27.7-gke.1121000\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.24 to version [1.25.15-gke.1115000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12515) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.25 to version [1.26.10-gke.1101000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12610) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.26 to version [1.26.10-gke.1101000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12610) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.27 to version [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.28 to version [1.28.3-gke.1118000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Drive API"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": "You can now get a list of the user's installed apps in v3, with information about each app's supported MIME types, file extensions, and other details.\n\nThe [`apps`](https://developers.google.com/drive/api/reference/rest/v3/apps) resource represents a user's list of installed apps and it supports the following methods:\n\n* [Get](https://developers.google.com/drive/api/reference/rest/v3/apps/get) a specific installed app.\n\n* [List](https://developers.google.com/drive/api/reference/rest/v3/apps/list) all the installed apps."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": "#### (2024-R02) Version updates\n  \nNote: Your clusters might not have these versions available. Rollouts are already in progress when we publish the release notes, and can take multiple days to complete across all Google Cloud zones.\n\n * Version [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290) is now the default version in the Rapid channel.\n * The following versions are now available in the Rapid channel:\n     * [1.25.16-gke.1360000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n     * [1.26.13-gke.1052000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12613)\n     * [1.27.10-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v12710)\n     * [1.28.6-gke.1095000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1286)\n     * [1.29.1-gke.1016000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1291)\n * The following versions are no longer available in the Rapid channel:\n     * 1.24.17-gke.2364000\n     * 1.24.17-gke.2472000\n     * 1.25.16-gke.1041000\n     * 1.26.11-gke.1055000\n     * 1.27.8-gke.1067000\n     * 1.28.3-gke.1203001\n * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.24 to version [1.25.16-gke.1268000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.25 to version [1.26.12-gke.1111000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12612) with this release.\n * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.26 to version [1.27.9-gke.1092000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1279) with this release.\n * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.27 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release.\n * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": "#### (2024-R02) Version updates\n\nNote: Your clusters might not have these versions available. Rollouts are already in progress when we publish the release notes, and can take multiple days to complete across all Google Cloud zones.\n\n  * The following control plane and node versions are now available:\n      * [1.25.16-gke.1360000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.13-gke.1052000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12613)\n      * [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.27.10-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v12710)\n      * [1.28.6-gke.1095000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1286)\n      * [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290)\n      * [1.29.1-gke.1016000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1291)\n  * The following versions are no longer available:\n      * 1.24.17-gke.200\n      * 1.24.17-gke.2266000\n      * 1.24.17-gke.2364000\n      * 1.24.17-gke.2472000\n      * 1.25.10-gke.2700\n      * 1.25.13-gke.200\n      * 1.27.4-gke.900\n      * 1.27.5-gke.200\n      * 1.27.7-gke.1121000\n      * 1.27.8-gke.1067000\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.24 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.25 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.27 to version [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Cloud Billing"
+                        },
+                        {
+                            "v": "FEATURE"
+                        },
+                        {
+                            "v": "**Recommendations for Compute Engine Flexible committed use discounts are now Generally Available**\n\nFlexible CUDs add flexibility to your spending capabilities by eliminating the need to restrict your commitments to a single project, region, or machine series. Flexible CUDs recommendations in the FinOps Hub help you optimize costs by analyzing your spending trends and existing commitments to suggest purchase amounts for Flexible CUDs.\n\n* [Learn more about Flexible CUDs](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based)\n* [Learn more about the FinOps Hub](https://cloud.google.com/billing/docs/how-to/finops-hub)\n"
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": " #### (2024-R02) Version updates\n\nNote: Your clusters might not have these versions available. Rollouts are already in progress when we publish the release notes, and can take multiple days to complete across all Google Cloud zones.\n\n  * The following versions are now available in the Regular channel:\n      * [1.25.16-gke.1268000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.12-gke.1111000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12612)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.27.9-gke.1092000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1279)\n      * [1.28.5-gke.1217000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1285)\n      * [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290)\n  * The following versions are no longer available in the Regular channel:\n      * 1.24.17-gke.2266000\n      * 1.24.17-gke.2364000\n      * 1.25.15-gke.1115000\n      * 1.26.10-gke.1101000\n      * 1.27.7-gke.1121000\n      * 1.27.8-gke.1067000\n      * 1.28.3-gke.1203001\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.24 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.25 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.27 to version [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "NON_BREAKING_CHANGE"
+                        },
+                        {
+                            "v": "#### (2024-R02) Version updates\n\nGKE cluster versions have been updated.\n\n**New versions available for upgrades and new clusters**\n\nThe following Kubernetes versions are now available for new clusters and for\nopt-in control plane upgrades and node upgrades for existing clusters. For more\ninformation on versioning and upgrades, see [GKE versioning and support](https://cloud.google.com/kubernetes-engine/versioning)\nand [Upgrades](https://cloud.google.com/kubernetes-engine/upgrades).\n\n* {No channel}\n\n  Note: Your clusters might not have these versions available. Rollouts are\n  already in progress when we publish the release notes, and can take multiple\n  days to complete across all Google Cloud zones.\n\n  * The following control plane and node versions are now available:\n      * [1.25.16-gke.1360000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.13-gke.1052000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12613)\n      * [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.27.10-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v12710)\n      * [1.28.6-gke.1095000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1286)\n      * [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290)\n      * [1.29.1-gke.1016000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1291)\n  * The following versions are no longer available:\n      * 1.24.17-gke.200\n      * 1.24.17-gke.2266000\n      * 1.24.17-gke.2364000\n      * 1.24.17-gke.2472000\n      * 1.25.10-gke.2700\n      * 1.25.13-gke.200\n      * 1.27.4-gke.900\n      * 1.27.5-gke.200\n      * 1.27.7-gke.1121000\n      * 1.27.8-gke.1067000\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.24 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.25 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.27 to version [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278) with this release.\n  * Control planes and nodes with auto-upgrade enabled will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release.\n\n* {Stable channel}\n\n  Note: Your clusters might not have these versions available. Rollouts are\n  already in progress when we publish the release notes, and can take multiple\n  days to complete across all Google Cloud zones.\n\n  * The following versions are now available in the Stable channel:\n      * [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.11-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12611)\n      * [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.28.3-gke.1118000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283)\n  * The following versions are no longer available in the Stable channel:\n      * 1.24.17-gke.200\n      * 1.24.17-gke.2266000\n      * 1.25.10-gke.2700\n      * 1.25.13-gke.200\n      * 1.27.4-gke.900\n      * 1.27.5-gke.200\n      * 1.27.7-gke.1121000\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.24 to version [1.25.15-gke.1115000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12515) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.25 to version [1.26.10-gke.1101000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12610) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.26 to version [1.26.10-gke.1101000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12610) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.27 to version [1.27.7-gke.1121002](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1277) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Stable channel will be upgraded from version 1.28 to version [1.28.3-gke.1118000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release.\n\n* {Regular channel}\n\n  Note: Your clusters might not have these versions available. Rollouts are\n  already in progress when we publish the release notes, and can take multiple\n  days to complete across all Google Cloud zones.\n\n  * The following versions are now available in the Regular channel:\n      * [1.25.16-gke.1268000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.12-gke.1111000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12612)\n      * [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278)\n      * [1.27.9-gke.1092000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1279)\n      * [1.28.5-gke.1217000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1285)\n      * [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290)\n  * The following versions are no longer available in the Regular channel:\n      * 1.24.17-gke.2266000\n      * 1.24.17-gke.2364000\n      * 1.25.15-gke.1115000\n      * 1.26.10-gke.1101000\n      * 1.27.7-gke.1121000\n      * 1.27.8-gke.1067000\n      * 1.28.3-gke.1203001\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.24 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.25 to version [1.25.16-gke.1041000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.27 to version [1.27.8-gke.1067004](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1278) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Regular channel will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release.\n\n* {Rapid channel}\n\n  Note: Your clusters might not have these versions available. Rollouts are\n  already in progress when we publish the release notes, and can take multiple\n  days to complete across all Google Cloud zones.\n\n  * Version [1.29.0-gke.1381000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1290) is now the default version in the Rapid channel.\n  * The following versions are now available in the Rapid channel:\n      * [1.25.16-gke.1360000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516)\n      * [1.26.13-gke.1052000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12613)\n      * [1.27.10-gke.1055000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v12710)\n      * [1.28.6-gke.1095000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1286)\n      * [1.29.1-gke.1016000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#v1291)\n  * The following versions are no longer available in the Rapid channel:\n      * 1.24.17-gke.2364000\n      * 1.24.17-gke.2472000\n      * 1.25.16-gke.1041000\n      * 1.26.11-gke.1055000\n      * 1.27.8-gke.1067000\n      * 1.28.3-gke.1203001\n  * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.24 to version [1.25.16-gke.1268000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.25 to version [1.26.12-gke.1111000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md#v12612) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.26 to version [1.27.9-gke.1092000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1279) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.27 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release.\n  * Control planes and nodes with auto-upgrade enabled in the Rapid channel will be upgraded from version 1.28 to version [1.28.3-gke.1286000](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) with this release."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Security Command Center"
+                        },
+                        {
+                            "v": "FEATURE"
+                        },
+                        {
+                            "v": "**Security Command Center Management API released to General Availability**\n\nThe Security Command Center Management API, which provides API support for managing settings and custom modules, is released to [General Availability](https://cloud.google.com/products#product-launch-stages).\n\nFor more information, see [Security Center Management API](https://cloud.google.com/security-command-center/docs/reference/security-center-management/rest)."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Google Kubernetes Engine"
+                        },
+                        {
+                            "v": "ISSUE"
+                        },
+                        {
+                            "v": "Clusters that are running GPUs and are upgraded from 1.26 to a 1.27 patch version earlier than 1.27.8 might experience issues with their nodes' GPU device plugins (`nvidia-gpu-device-plugin`). Do the following steps depending on the state of your cluster:\n\n* If your cluster is running version 1.26 and has GPUs, don't manually upgrade your cluster until version 1.27.8 is available in your cluster's release channel. As of the publishing date of this release note, 1.27.8 patch versions are available in the Rapid and Regular channels.\n* If your cluster is running an earlier 1.27 patch version and the nodes are affected, restart the nodes or manually delete the `nvidia-gpu-device-plugin` Pod on the nodes (the add-on manager will create a new working plugin).\n* If your cluster is using auto-upgrades, this doesn't affect you as automatic upgrades will only move clusters to patch versions with the fix."
+                        },
+                        {
+                            "v": "2024-01-26"
+                        }
+                    ]
+                },
+                {
+                    "f": [
+                        {
+                            "v": "Anthos Config Management"
+                        },
+                        {
+                            "v": "FIX"
+                        },
+                        {
+                            "v": "Fixed an issue where the log level could not be set for the otel-agent container."
+                        },
+                        {
+                            "v": "2024-01-25"
+                        }
+                    ]
+                }
+            ],
+            "totalBytesProcessed": "11008730",
+            "jobComplete": true,
+            "cacheHit": false,
+            "queryId": "job_QDftwzt96Ag5KVcYBGGf2kxnB6lr"
+        }
+    }
+}

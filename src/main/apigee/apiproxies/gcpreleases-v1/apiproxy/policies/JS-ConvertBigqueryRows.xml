@@ -1,3 +1,4 @@
 <Javascript name='JS-ConvertBigqueryRows' timeLimit='200'>
+  <IncludeURL>jsc://library.js</IncludeURL>
   <ResourceURL>jsc://reformatBigqueryResponse.js</ResourceURL>
 </Javascript>

@@ -1,3 +1,4 @@
 /cert
 /target
 /src/tests/local-data-for-testing
+/node_modules
