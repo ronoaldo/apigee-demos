@@ -2,7 +2,7 @@
 
 steps:
   # Run all unit tests for all policies as configured by package.json
-  - name: 'nodejs:18'
+  - name: 'node:18'
     id: run-unit-tests
     entrypoint: 'npm'
     args: ['test']
