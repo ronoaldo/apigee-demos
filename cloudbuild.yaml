@@ -14,7 +14,7 @@ steps:
     args: ['test']
   
   # Package and deploy API Proxy Bundle after unit testing
-  # TODO(ronoaldo): add script to automate this on every environment.
+  # TODO(ronoaldo): move this logic to custom cloud builder.
   - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
     id: build-and-deploy
     script: |
@@ -24,3 +24,21 @@ steps:
       curl -L https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | sh -
       export PATH=$PATH:$HOME/.apigeecli/bin
       make deploy
+
+  # Run unit integration tests on deployed target
+  - name: 'node:18'
+    id: run-integration-tests
+    entrypoint: 'npm'
+    args: ['run', 'integration-test']
+
+  # Deploy package to production if integration tests pass
+  # TODO(ronoaldo): move this logic to custom cloud builder.
+  - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
+    id: build-and-deploy
+    script: |
+      #!/usr/bin/env bash
+      set -e
+      apt-get update && apt-get -yq install make zip unzip
+      curl -L https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | sh -
+      export PATH=$PATH:$HOME/.apigeecli/bin
+      make deploy env=prod
