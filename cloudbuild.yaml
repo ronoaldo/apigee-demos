@@ -16,7 +16,7 @@ steps:
   # Package and deploy API Proxy Bundle after unit testing
   # TODO(ronoaldo): move this logic to custom cloud builder.
   - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
-    id: build-and-deploy
+    id: deploy-to-eval
     script: |
       #!/usr/bin/env bash
       set -e
@@ -34,7 +34,7 @@ steps:
   # Deploy package to production if integration tests pass
   # TODO(ronoaldo): move this logic to custom cloud builder.
   - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:461.0.0'
-    id: build-and-deploy
+    id: deploy-to-prod
     script: |
       #!/usr/bin/env bash
       set -e
