@@ -1,6 +1,12 @@
 # CI/CD pipeline for Apigee Demos project
 
 steps:
+  # Install dependencies into 'node_modules'
+  - name: 'node:18'
+    id: install-node-deps
+    entrypoint: 'npm'
+    args: ['install']
+
   # Run all unit tests for all policies as configured by package.json
   - name: 'node:18'
     id: run-unit-tests
