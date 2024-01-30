@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-DiscoveryOAS">
+  <DisplayName>AM-DiscoveryOAS</DisplayName>
+  <AssignVariable>
+    <Name>oas-spec</Name>
+    <ResourceURL>oas://gcprelease-v1.yaml</ResourceURL>
+  </AssignVariable>
+  <Add>
+    <Headers>
+      <Header name="X-Discovery-Type">oas</Header>
+      <Header name="X-Discovery-Version">3.0.0</Header>
+    </Headers>
+  </Add>
+  <Set>
+    <Payload contentType='application/yaml'>{oas-spec}</Payload>
+  </Set>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

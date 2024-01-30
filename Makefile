@@ -33,3 +33,10 @@ deploy: clean bundle .apigeecli-setup
 
 clean-revisions: .apigeecli-setup
 	apigeecli apis clean --name $(PROXY) --report=false
+
+# Local API client helper
+swagger-ui:
+	docker run --rm --name swagger-ui -p 8999:8080 \
+		-v $(PWD)/src/main/apigee/apiproxies/gcpreleases-v1/apiproxy/resources/oas:/specs \
+		-e SWAGGER_JSON=/specs/gcprelease-v1.yaml \
+		swaggerapi/swagger-ui

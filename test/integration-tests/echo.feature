@@ -16,3 +16,9 @@ Feature:
     Then response code should be 200
     And response body should be valid xml
     And response body should contain application/xml
+
+  Scenario: CORS is configured for POST /echo
+    When I request OPTIONS for /echo
+    Then response code should be 204
+    And response header access-control-allow-origin should exist
+    And response header access-control-allow-origin should be \\*

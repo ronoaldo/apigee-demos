@@ -1,0 +1,11 @@
+<CORS continueOnError="false" enabled="true" name="CORS-AddCORS">
+  <DisplayName>CORS-AddCORS</DisplayName>
+  <AllowOrigins>{request.header.origin}</AllowOrigins>
+  <AllowMethods>GET, PUT, POST</AllowMethods>
+  <AllowHeaders>origin, x-requested-with, accept, content-type, apikey</AllowHeaders>
+  <ExposeHeaders>*</ExposeHeaders>
+  <MaxAge>-1</MaxAge>
+  <AllowCredentials>true</AllowCredentials>
+  <GeneratePreflightResponse>true</GeneratePreflightResponse>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</CORS>

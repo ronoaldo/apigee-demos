@@ -8,6 +8,6 @@
     "totalRows": {bigqueryResult.totalRows}
     }</Payload>
   </Set>
-  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
   <AssignTo createNew="false" transport="http" type="response"/>
 </AssignMessage>
