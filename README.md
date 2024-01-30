@@ -86,3 +86,4 @@ local environment setup.
 * Inspiration: https://www.youtube.com/watch?v=lUDZAzSpWEw
 * Some in-depth inspiration with implementation details: https://youtu.be/58smxQu3P5k
 * Using Google Authentication docs: https://cloud.google.com/apigee/docs/api-platform/security/google-auth/overview
+* BDD Proxy Development with Apigee: https://github.com/apigee/devrel/blob/main/labs/bdd-proxy-development/lab.md
