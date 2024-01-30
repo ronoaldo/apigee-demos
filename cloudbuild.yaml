@@ -44,4 +44,4 @@ steps:
       apt-get update && apt-get -yq install make zip unzip
       curl -L https://raw.githubusercontent.com/apigee/apigeecli/main/downloadLatest.sh | sh -
       export PATH=$PATH:$HOME/.apigeecli/bin
-      make deploy env=prod
+      make deploy ENV=prod
